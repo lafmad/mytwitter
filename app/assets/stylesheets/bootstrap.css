@@ -221,7 +221,7 @@ textarea {
   }
 }
 
-/* body {
+body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -229,7 +229,6 @@ textarea {
   color: #333333;
   background-color: #ffffff;
 }
-*/
 
 a {
   color: #0088cc;
@@ -6118,7 +6117,7 @@ a.badge:focus {
   margin-bottom: 0;
 }
 
-/*.hero-unit {
+.hero-unit {
   padding: 60px;
   margin-bottom: 30px;
   font-size: 18px;
@@ -6130,7 +6129,7 @@ a.badge:focus {
      -moz-border-radius: 6px;
           border-radius: 6px;
 }
-*/
+
 .hero-unit h1 {
   margin-bottom: 0;
   font-size: 60px;

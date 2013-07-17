@@ -10,10 +10,10 @@
     <![endif]-->
 </head>
 <body>
-	<%= render 'layouts/header' %>
-	
-	<%= yield %>
-	<%= render 'layouts/footer' %>
-	
-</body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
 </html>
