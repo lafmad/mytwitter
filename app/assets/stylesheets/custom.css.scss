@@ -1,7 +1,11 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 body {
-  background: #e5e5e5 url(http://www.dandyweng.com/images/patterns/mooning.png);
+  background: url(http://www.dandyweng.com/images/cover-5.jpg);
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.dandyweng.com/images/patterns/mooning.png/images/cover-5.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.dandyweng.com/images/cover-5.jpg', sizingMethod='scale')";
+  color: #fff;
   overflow-x: hidden;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
