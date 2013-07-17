@@ -6,7 +6,7 @@ describe "用户页面" do
 
 	describe "注册页面" do
 		before {visit signup_path}
-		let(:submit){"Create my account"}
+		let(:submit){"注册"}
 
 		describe "错误的注册信息" do
 			it "注册失败" do

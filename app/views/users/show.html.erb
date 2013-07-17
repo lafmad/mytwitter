@@ -1,15 +1,13 @@
 <% provide(:title, @user.name) %>
-<header id="banner" class="hero-unit no-radius">
+
 
 <div class="row">
   <aside class="span4">
     <section>
       <h1>
-        <%= gravatar_for @user %><br>
+        <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
     </section>
   </aside>
 </div>
-
-</header>
