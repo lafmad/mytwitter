@@ -895,3 +895,12 @@ $grayMediumLight: #eaeaea;
   margin-top: 45px;
   @include box_sizing;
 }
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: auto;
+  padding: 10px;
+  height: auto !important;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
