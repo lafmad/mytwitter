@@ -1,15 +1,12 @@
-@import "bootstrap";
-@import "bootstrap-responsive";
+
 body {
-  background: url(http://www.dandyweng.com/images/cover-5.jpg);
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.dandyweng.com/images/patterns/mooning.png/images/cover-5.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.dandyweng.com/images/cover-5.jpg', sizingMethod='scale')";
-  color: #fff;
+  padding-top: 5px;
+  background: #e5e5e5 url(http://www.dandyweng.com/images/cover-5.jpg);
   overflow-x: hidden;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
 img, p {
   -webkit-touch-callout: none;
 }
@@ -77,11 +74,11 @@ header {
 .hero-unit {
   background: url(http://www.dandyweng.com/images/cover-5.jpg);
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.dandyweng.com/images/patterns/mooning.png/images/cover-5.jpg', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http:http://www.dandyweng.com/images/cover-5.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.dandyweng.com/images/cover-5.jpg', sizingMethod='scale')";
   color: #fff;
   height: 300px;  
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 .hero-unit h1 {
   /* font: 88px Minion,'Optima', "Times New Roman", Times, serif; */
@@ -559,7 +556,7 @@ a.thumbnail small {
 /* = 响应式 Responsive
 ----------------------------------------------- */
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .padding-huge {
     padding: 65px;
   }
@@ -607,6 +604,7 @@ a.thumbnail small {
   }
 
 }
+*/
  
 
 
