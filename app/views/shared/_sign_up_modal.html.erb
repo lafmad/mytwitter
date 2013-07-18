@@ -1,0 +1,31 @@
+<div class="modal hide" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">x</button>
+    <h3></h3>
+  </div>
+  <div class="modal-body">
+
+
+     <%= form_for(@user) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+  </div>
+  <div class="modal-footer">
+    New To MyTwitter?
+    <a href="signup" class="btn btn-primary">Register</a>
+  </div>
+</div>
