@@ -1,31 +1,35 @@
-<div class="modal hide" id="myModal">
+<div class="modal hide" id="signupModal">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">x</button>
-    <h3></h3>
+    <h3><%= image_tag("littletwitter.jpg",class: "profile img-circle loading", width: "30") %></h3>
   </div>
   <div class="modal-body">
 
 
-     <%= form_for(@user) do |f| %>
+   <form accept-charset="UTF-8" action="/users" class="new_user"
+      id="new_user" method="post">
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+  <label for="user_name">Name</label>
+  <input id="user_name" name="user[name]" size="30" type="text" />
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+  <label for="user_email">Email</label>
+  <input id="user_email" name="user[email]" size="30" type="text" />
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+  <label for="user_password">Password</label>
+  <input id="user_password" name="user[password]" size="30"
+         type="password" />
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+  <label for="user_password_confirmation">Confirmation</label>
+  <input id="user_password_confirmation"
+         name="user[password_confirmation]" size="30" type="password" />
 
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
-    <% end %>
+  <input class="btn btn-large btn-large btn-primary" name="commit" type="submit"
+         value="Create my account" />
+</form>
 
   </div>
   <div class="modal-footer">
-    New To MyTwitter?
-    <a href="signup" class="btn btn-primary">Register</a>
+    瞄了个眯，我好像注册过了？??
+    <a href="#signinModal" class="btn btn-primary">登录</a>
   </div>
 </div>

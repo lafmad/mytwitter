@@ -2,10 +2,10 @@
 @import "bootstrap-responsive";
 
 .hero-unit {
-  background: url(http://dandyweng.com/images/cover-5.jpg);
+  background: image-url("cover-5.jpg");
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://dandyweng.com/images/cover-5.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://dandyweng.com/images/cover-5.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="image-url("cover-5.jpg")", sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src="image-url("cover-5.jpg")", sizingMethod='scale')";
   color: #fff;
   height: 480px;  
   margin-bottom: 0;
@@ -118,7 +118,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: #ffc;
 }
 
 p {
