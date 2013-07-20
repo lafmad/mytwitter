@@ -1,3 +1,6 @@
+<% if signed_in? %>
+<% provide(:title, @current_user.name) %>
+<% end %>
 <div class="center hero-unit no-radius">
    <img class="profile img-circle loading" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSNo1GUq6F7_2oOCk8_uXctye8qxB1gU0DQZ2ock7_ycSterBUMfg">
    <h1>Enjoy Solitude</h1>
