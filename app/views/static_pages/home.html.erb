@@ -1,10 +1,28 @@
 <% if signed_in? %>
 <% provide(:title, @current_user.name) %>
-<% end %>
+<div class="row">
+
+	<aside class="span4">
+		<section>
+			<%= render 'shared/user_info' %>
+		</section>
+		<section>
+			<%= render 'shared/micropost_form' %>
+		</section>
+	</aside>
+
+	<div class="span8">
+		<h3>动态</h3>
+		<%= render 'shared/feed' %>
+	</div>
+
+</div>
+<% else %>
 <div class="center hero-unit no-radius">
-   <img class="profile img-circle loading" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSNo1GUq6F7_2oOCk8_uXctye8qxB1gU0DQZ2ock7_ycSterBUMfg">
-   <h1>Enjoy Solitude</h1>
-   <h2>lafmad's twitter</h2>
-    <a class="btn btn-primary  btn-large" data-toggle="modal" href="#signupModal" >SignUp</a>
- </div>
- <%= render 'shared/sign_up_modal' %>
+	<%= image_tag("bigtweet.jpg",class: "profile img-circle loading", width: "180") %>
+	<h1>Enjoy Solitude</h1>
+	<h2>lafmad's twitter</h2>
+	<a class="btn btn-primary  btn-large" data-toggle="modal" href="#signupModal" >SignUp</a>
+</div>
+<%= render 'shared/sign_up_modal' %>
+<% end %>

@@ -1,7 +1,15 @@
+#coding: utf-8
 module SessionsHelper
 	def sign_in(user)
 		cookies.permanent[:remember_token] = user.remember_token
 		self.current_user = user
+	end
+
+	def signed_in_user
+		unless signed_in?
+			store_location
+			redirect_to signin_path,notice:"您还没登录呐!" unless signed_in?
+		end
 	end
 
 	def signed_in?
