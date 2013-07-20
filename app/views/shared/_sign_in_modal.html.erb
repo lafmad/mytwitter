@@ -1,28 +1,28 @@
 <div class="modal hide" id="signinModal">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">x</button>
-    <h3><img class="profile img-circle loading" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSbRhHwlmA6tP1vRBDilFiPiAohv3EY6_FrxX800vWm27Hp31cedQ" width="30"></h3>
+    <h3><%= image_tag("littletwitter.jpg",class: "profile img-circle loading", width: "30") %></h3>
   </div>
 
   <div class="modal-body">
 
     <form accept-charset="UTF-8" action="/sessions" method="post">
   <div>
-    <label for="session_email">Email</label>
+    <label for="session_email">邮箱</label>
     <input id="session_email" name="session[email]" size="30" type="text" />
   </div>
   <div>
-    <label for="session_password">Password</label>
+    <label for="session_password">密码</label>
     <input id="session_password" name="session[password]" size="30"
            type="password" />
   </div>
   <input class="btn btn-large btn-primary" name="commit" type="submit"
-         value="Sign in" />
+         value="登录" />
 </form>
 
   </div>
   <div class="modal-footer">
-    New To MyTwitter?
-    <a href="signup" class="btn btn-primary">Register</a>
+    新来的？??
+    <a href="signup" class="btn btn-primary">来这里注册</a>
   </div>
 </div>
