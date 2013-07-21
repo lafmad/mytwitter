@@ -5,9 +5,18 @@
 <div class="row">
 	<div class="span4 offset4">
 		<%= form_for(@user) do |f| %>
-		 <%= render 'shared/error_messages', object: f.object %>
-		<%= render 'fields',f: f %>
-		<%= f.submit "注册", class: "btn btn-large btn-primary" %>
+		<%= render 'shared/error_messages', object: f.object %>
+		<%= render 'fields',f: f %> 
+		
+		<div class="hua">
+			
+			<%= f.submit "注册", class: "btn btn-large btn-primary pull-left" %>
+			<%= image_tag("hua.png",class: "profile img-circle loading", width: "80") %><br>
+			<h>瞄了个眯，又茫然了，好像注册过了?</l>
+			<a href="signin" class="btn btn-primary pull-right">登录</a>
+		</div>
+		
 		<% end %>
+
 	</div>
 </div>

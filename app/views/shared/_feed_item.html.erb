@@ -5,7 +5,7 @@
 	</span>
 	<span class="content"><%= feed_item.content %></span>
 	<span class="timestamp">
-		发表于<%= time_ago_in_words(feed_item.created_at) %> 前
+		发表于 <%= Time.zone.now %>距今已有<%= time_ago_in_words(feed_item.created_at) %>
 	</span>
 	<% if current_user?(feed_item.user) %>
 	<%= link_to "删除", feed_item, method: :delete,
