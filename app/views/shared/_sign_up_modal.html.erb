@@ -1,7 +1,7 @@
 <div class="modal hide" id="signupModal">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">x</button>
-    <h3><%= image_tag("littletwitter.jpg",class: "profile img-circle loading", width: "30") %></h3>
+    <h3><%= image_tag("littletwitter.jpg",class: "profile img-circle loading", width: "40") %></h3>
   </div>
   <div class="modal-body">
 
@@ -24,12 +24,12 @@
          name="user[password_confirmation]" size="30" type="password" />
 
   <input class="btn btn-large btn-large btn-primary" name="commit" type="submit"
-         value="登录" />
+         value="注册" />
 </form>
 
   </div>
   <div class="modal-footer">
-    瞄了个眯，我好像注册过了？??
+    <%= image_tag("hua.png",class: "profile img-circle loading", width: "80") %>&nbsp;瞄了个眯，又茫然了，好像注册过了?
     <a href="signin" class="btn btn-primary">登录</a>
   </div>
 </div>

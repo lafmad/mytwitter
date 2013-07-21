@@ -7,6 +7,9 @@
 			<%= render 'shared/user_info' %>
 		</section>
 		<section>
+			<%= render 'shared/stats' %>
+		</section>
+		<section>
 			<%= render 'shared/micropost_form' %>
 		</section>
 	</aside>
@@ -19,7 +22,7 @@
 </div>
 <% else %>
 <div class="center hero-unit no-radius">
-	<%= image_tag("bigtweet.jpg",class: "profile img-circle loading", width: "180") %>
+	<%= image_tag("bigtweet.jpg",class: "profile img-circle loading", width: "220") %>
 	<h1>Enjoy Solitude</h1>
 	<h2>lafmad's twitter</h2>
 	<a class="btn btn-primary  btn-large" data-toggle="modal" href="#signupModal" >SignUp</a>
