@@ -5,7 +5,17 @@ class MicropostsController < ApplicationController
 
 
 	def index
+		if signed_in?
+			@micropost  = current_user.microposts.build if signed_in?
+			@feed_items = current_user.feed.paginate(page: params[:page])
+		end
 	end
+
+	def show
+		@micropost = Micropost.find_by_id(params[:id])
+		@comment = @micropost.comments.build  #没和user挂钩，问题？
+	end
+
 
 	def create
 		@micropost = current_user.microposts.build(params[:micropost])
