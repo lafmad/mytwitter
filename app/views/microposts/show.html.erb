@@ -1,5 +1,5 @@
-  <div class="row">
-  	<aside class="span4">
+<div class="row">
+	<aside class="span4">
 		<section>
 			<%= render 'shared/user_info' %>
 		</section>
@@ -9,19 +9,33 @@
 		<section>
 			<%= render 'shared/comment_form' %>
 		</section>
+
 	</aside>
- <div class="field span6">
- 	<li>
-	<span class="content"><%= @micropost.content %></span>
-	<span class="timestamp">
-		发表于 <%= Time.zone.now %>距今已有<%= time_ago_in_words(@micropost.created_at) %>		
-	</span>
-    <% if current_user?(@micropost.user) %>
-    <%= link_to "删除", micropost, method: :delete,
-                                     data: { confirm: "You sure?" },
-                                     title: @micropost.content %>
-   <% end %>
-   <%= link_to "回复",@micropost%>
-</li>
- </div>
+	<div class="span8">
+		<% micropost = @micropost %>
+		<%= link_to gravatar_for(micropost.user), micropost.user %>
+		<span class="user">
+			<%= link_to micropost.user.name, micropost.user %>
+		</span>
+		<span class="content"><%= micropost.content %></span>
+		<span class="timestamp">
+			发表于 <%= Time.zone.now %>距今已有<%= time_ago_in_words(micropost.created_at) %>		
+		</span>
+		<% if current_user?(micropost.user) %>
+		<%= link_to "删除", micropost, method: :delete,
+		data: { confirm: "You sure?" },
+		title: micropost.content %>
+		<% end %>
+		<%= link_to "回复",micropost%>
+
+		<div class="">
+			<% if @micropost.comments.any? %>
+			<h3>回复(<%= @micropost.comments.count %>)</h3>
+			<ol class="microposts">
+				<%= render @comments%>
+			</ol>
+			<%= will_paginate @comments %>
+			<% end %>
+		</div>
+	</div>
 </div>

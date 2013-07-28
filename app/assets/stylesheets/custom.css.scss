@@ -4,8 +4,14 @@
 .hero-unit {
   background: image-url("cover-5.jpg");
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="image-url("cover-5.jpg")", sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src="image-url("cover-5.jpg")", sizingMethod='scale')";
+  color: #fff;
+  height: 480px;  
+  margin-bottom: 0;
+}
+
+.hero-unit2 {
+  background: image-url("railsway.jpg");
+  background-size: 100% 100%;
   color: #fff;
   height: 480px;  
   margin-bottom: 0;
@@ -19,54 +25,6 @@
 }
 
 .modal{position:absolute;}
-/* dandywang's 
-.hero-unit img {
-  max-width: 500px;
-  -webkit-animation: title-in 1s ease-out 0 1 forwards;
-  -webkit-transition: 500ms;
-  -moz-transition: 500ms;
-  transition: 500ms;
-
-}
-.hero-unit img:hover {
-  -webkit-transform: translateY(-5px) scale(1.05) rotate(2deg);
-  -moz-transform: translateY(-5px) scale(1.05) rotate(2deg);
-  transform: translateY(-5px) scale(1.05) rotate(2deg);
-}
-#loading {
-  position: relative;
-  background: -webkit-gradient( linear, left bottom, left top, color-stop(0.2, rgba(0, 0, 0, 0.8)), color-stop(0.50, rgba(0, 0, 0, 0.7)), color-stop(0.80, rgba(0, 0, 0, 0.6)) );
-  width: 100px;
-  height: 100px;
-  margin: 0px auto 80px;
-  color: #FFF;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.35), 1px 1px 50px 8px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.35), 1px 1px 50px 8px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.35), 1px 1px 50px 8px rgba(0, 0, 0, 0.4);
-  -webkit-animation: spinner-in 1s linear 0 1 forwards;
-}
-img.profile {
-  max-width: 100px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  -webkit-transition: 500ms;
-  -moz-transition: 500ms;
-  transition: 500ms;
-  
-  -webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-}
-img.profile:hover {
-  -webkit-animation: profile-img-hover 1000ms ease-out 100ms infinite forwards;
-}
-img.profile:active {
-  -webkit-animation: profile-img-active 500ms linear 0 infinite forwards;
-}
-*/
 
 /* mixins, variables, etc. */
 

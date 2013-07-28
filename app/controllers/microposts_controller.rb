@@ -6,14 +6,14 @@ class MicropostsController < ApplicationController
 
 	def index
 		if signed_in?
-			@micropost  = current_user.microposts.build if signed_in?
 			@feed_items = current_user.feed.paginate(page: params[:page])
 		end
 	end
 
 	def show
-		@micropost = Micropost.find_by_id(params[:id])
-		@comment = @micropost.comments.build  #没和user挂钩，问题？
+		@micropost = Micropost.find(params[:id])
+		@comments = @micropost.comments.paginate(page: params[:page])
+		@comment = @micropost.comments.build(params[:comment])
 	end
 
 
@@ -23,7 +23,7 @@ class MicropostsController < ApplicationController
 			redirect_to root_url
 		else
 			@feed_items = []
-			render 'static_pages/home'
+			render 'static_pages/show'
 		end
 	end
 
