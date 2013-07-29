@@ -1,0 +1,16 @@
+<li>
+	<%= link_to gravatar_for(comment.micropost.user,size: 52), comment.micropost.user %>
+	<span class="user">
+		<%= link_to comment.micropost.user.name, comment.micropost.user %>
+	</span>
+	<span class="content"><%= comment.content %></span>
+	<span class="timestamp">
+		回复于 <%= Time.zone.now %>距今已有<%= time_ago_in_words(comment.created_at) %>		
+	</span>
+	<% if current_user?(comment.micropost.user) %>
+	<%= link_to "删除", [@micropost,comment], method: :delete,
+	data: { confirm: "You sure?" },
+	title: comment.content %>
+	<% end %>
+
+</li>

@@ -1,7 +1,7 @@
-<%= form_for(@micropost) do |f| %>
+<%= form_for ([@micropost,@comment]) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "说点什么..." %>
+    <%= f.text_area :content, placeholder: "回复点什么..." %>
   </div>
   <%= f.submit "提交", class: "btn btn-large btn-primary" %>
 <% end %>
