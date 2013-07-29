@@ -1,7 +1,8 @@
 <li>
-	<%= link_to gravatar_for(comment.micropost.user,size: 52), comment.micropost.user %>
+	<% comment_ownner =  User.find_by_id(comment.commentfrom_id) %>
+	<%= link_to gravatar_for(comment_ownner,size: 52), comment_ownner %>
 	<span class="user">
-		<%= link_to comment.micropost.user.name, comment.micropost.user %>
+		<%= link_to comment_ownner.name, comment_ownner %>
 	</span>
 	<span class="content"><%= comment.content %></span>
 	<span class="timestamp">
