@@ -5,7 +5,7 @@
 	</span>
 	<span class="content"><%= comment.content %></span>
 	<span class="timestamp">
-		回复于 <%= Time.zone.now %>距今已有<%= time_ago_in_words(comment.created_at) %>		
+		回复于 <%= comment.created_at %>距今已有<%= time_ago_in_words(comment.created_at) %>		
 	</span>
 	<% if current_user?(comment.micropost.user) %>
 	<%= link_to "删除", [@micropost,comment], method: :delete,

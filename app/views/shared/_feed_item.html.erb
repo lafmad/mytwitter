@@ -5,7 +5,7 @@
 	</span>
 	<span class="content"><%= feed_item.content %></span>
 	<span class="timestamp">
-		发表于 <%= Time.zone.now %>距今已有<%= time_ago_in_words(feed_item.created_at) %>	<strong><%= feed_item.comments.count %>条</strong><%= link_to "回复",feed_item %>
+		发表于 <%= feed_item.created_at %>距今已有<%= time_ago_in_words(feed_item.created_at) %>	<strong><%= feed_item.comments.count %>条</strong><%= link_to "回复",feed_item %>
 	</span>
 
 	<% if current_user?(feed_item.user) %>
