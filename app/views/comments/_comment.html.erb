@@ -1,6 +1,12 @@
 <li>
+	
+	<% for i in 0...@micropost.comment_ids.length %>
+	<% if @micropost.comment_ids[i] == comment.id %>
+	<% i  %>
 	<% comment_ownner =  User.find_by_id(comment.commentfrom_id) %>
-	<%= link_to gravatar_for(comment_ownner,size: 52), comment_ownner %>
+	<%= link_to gravatar_for(comment_ownner,size: 52), comment_ownner %>#<%= i+1 %>楼
+	<% end %>
+	<% end %>
 	<span class="user">
 		<%= link_to comment_ownner.name, comment_ownner %>
 	</span>
@@ -8,7 +14,8 @@
 	<span class="timestamp">
 		回复于 <%= comment.created_at %>距今已有<%= time_ago_in_words(comment.created_at) %>		
 	</span>
-	<% if current_user?(comment.micropost.user) %>
+
+	<% if current_user?(comment_ownner) %>
 	<%= link_to "删除", [@micropost,comment], method: :delete,
 	data: { confirm: "You sure?" },
 	title: comment.content %>
